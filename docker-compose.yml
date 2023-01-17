@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-    # container Postgres para o microsserviço de API de autenticação em Node.js
+    # container Postgres para o microsserviço de API de autenticação
     auth-db:
         image: postgres:15.1
         container_name: auth-db
@@ -12,7 +12,7 @@ services:
             - POSTGRES_PASSWORD=123456
         ports:
             - 5432:5432
-    # container Postgres para o microsserviço de API de estoque de produtos em Java e Spring
+    # container Postgres para o microsserviço de API de estoque de produtos
     produto-db:
         image: postgres:15.1
         container_name: produto-db
@@ -23,7 +23,7 @@ services:
             - POSTGRES_PASSWORD=123456
         ports:
             - 5433:5432
-    # container Postgres para o microsserviço de API de vendas em Node.js        
+    # container Postgres para o microsserviço de API de vendas       
     vendas-db:
         image: mongo:latest
         container_name: vendas-db
